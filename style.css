@@ -1,0 +1,252 @@
+/*-----Variables-----*/
+:root {
+    --background: #F5F3EF;
+    --card: #FFFFFF;
+    --accent: #FEBD2F;
+    --text-primary: #000000;
+    --text-secondary: #646464;
+    --outline: #DCDCDC;
+    --heading-font: 'Roboto Serif', serif;
+    --detail-font: 'Roboto', sans-serif;
+    --h1-size: 64px;
+    --h1-weight: 500;
+    --h2-size: 40px;
+    --h2-weight: 500;
+    --h3-size: 24px;
+    --h3-weight: 700;
+    --p1-size: 24px;
+    --p2-size: 18px;
+    --p-weight: 400;
+    --button1-size: 18px;
+    --button2-size: 16px;
+    --button-weight: 500;
+}
+
+/*-----Body-----*/
+body {
+    background-color: var(--background);
+    /* height: 1666px; */
+    /* width: 1280px; */
+    /* margin: 20px 80px 0 80px; */
+}
+
+/*-----Main Grid Container-----*/
+.grid-container {
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    margin: auto;
+    padding: 20px 80px 0 80px;
+}
+
+/*-----Header Item-----*/
+.grid-item-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+/*-----Main Item-----*/
+.grid-item-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10%;
+    margin-bottom: 15%;
+
+
+
+    /* NOTES: added column-gap to put space in between image and text*/
+    column-gap: 20px;
+}
+
+
+
+
+
+/*-----Cards Item-----*/
+.grid-item-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px 40px;
+}
+
+/*-----Footer Item-----*/
+.grid-item-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--accent);
+    margin-top: 5%;
+    padding: 2% 0;
+}
+
+
+/*-----Links-----*/
+a {
+    text-decoration: none;
+    color: var(--text-primary);
+    font-family: var(--detail-font);
+    font-size: var(--button2-size);
+    font-weight: var(--button-weight);
+}
+
+/*-----Header Links-----*/
+.header-nav {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+
+
+
+
+
+    /* NOTES: added column-gap and width of 33% like we talked about */
+    column-gap: 20px;
+    width: 33%;
+}
+
+
+
+
+
+
+/* NOTES: added these two selectors for header */
+.header-img{
+    width: 33%;
+    display: flex;
+    justify-content: center;
+}
+
+.header-btn{
+    width: 33%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
+
+
+/*-----Header Button-----*/
+.grid-item-header button {
+    background-color: var(--text-primary);
+    color: var(--card);
+    border: none;
+    border-radius: 30px;
+    padding: 15px 25px;
+    font-family: var(--detail-font);
+    font-size: var(--button2-size);
+    font-weight: var(--button-weight);
+}
+
+
+/*-----Title Text-----*/
+.title-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+/*-----Title Heading-----*/
+h1 {
+    font-family: var(--heading-font);
+    font-size: var(--h1-size);
+    font-weight: var(--h1-weight);
+}
+
+/*-----Title Caption-----*/
+.title-text p {
+    font-family: var(--detail-font);
+    font-size: var(--p1-size);
+    font-weight: var(--p-weight);
+    color: var(--text-secondary);
+    line-height: 32px;
+}
+
+
+
+
+
+/* NOTES: removed this rule to get rid of page overflow on smaller screens */
+
+/*-----Title Image-----*/
+/* .grid-item-main img {
+    height: 90%;
+    width: 100%;   
+} */
+
+
+
+
+
+
+/*-----Yellow Card-----*/
+.yellow-card {
+    background-color: var(--accent);
+    border-radius: 50px;
+    padding: 20px 40px 45px 40px;
+}
+
+/*-----Yellow Card Heading-----*/
+.yellow-card h2 {
+    font-family: var(--heading-font);
+    font-size: var(--h2-size);
+    font-weight: var(--h2-weight);
+}
+
+/*-----White Cards-----*/
+.white-cards {
+    background-color: var(--card);
+    border-radius: 25%;
+    border-radius: 50px;
+    padding: 20px 40px 45px 40px;
+    position: relative;
+}
+
+/*-----White Card Buttons-----*/
+.white-cards button {
+    background-color: var(--card);
+    color: var(--text-primary);
+    border: solid 1px;
+    border-radius: 30px;
+    padding: 15px 25px;
+    font-family: var(--detail-font);
+    font-size: var(--button2-size);
+    font-weight: var(--button-weight);
+}
+
+/*-----White Card Heading-----*/
+.white-cards h3 {
+    font-family: var(--heading-font);
+    font-size: var(--h3-size);
+    font-weight: var(--h3-weight);
+}
+
+/*-----White Card Caption-----*/
+.white-cards p {
+    font-family: var(--detail-font);
+    font-size: var(--p2-size);
+    font-weight: var(--p2-weight);
+    color: var(--text-secondary);
+    line-height: 28px;
+}
+
+/*-----White Card Icon-----*/
+.white-cards img{
+ position: absolute;
+left: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+    /*-----Cards Item-----*/
+.grid-item-cards {
+    grid-template-columns: repeat(2, 1fr);
+}
+.grid-item-main{
+    flex-direction: column;
+}
+.grid-item-main img{
+    width: 100%;
+}
+}
